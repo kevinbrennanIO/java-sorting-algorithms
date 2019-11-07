@@ -11,7 +11,7 @@ public class Main
         Random rand = new Random();
         int num;
 
-        for (int i = 0; i < 5000; i++)
+        for (int i = 0; i < 10; i++)
         {
             num = rand.nextInt(10000);
             numbers.add(num);
@@ -54,6 +54,26 @@ public class Main
         System.out.println("After Selection Sort " + numbers);
         long endTime = System.currentTimeMillis();
         System.out.println("Selection Sort of " + numbers.size() + " elements took "  + (endTime - startTime)  + " Milliseconds");
+        Collections.shuffle(numbers);
+        System.out.println("-----------------------------------------");
+
+        // MERGE SORT TODO
+//        System.out.println("Before Merge Sort " + numbers);
+//        long startTime4 = System.currentTimeMillis();
+//        numbers.mergeSort();
+//        System.out.println("After Merge Sort " + numbers);
+//        long endTime4 = System.currentTimeMillis();
+//        System.out.println("Merge Sort of " + numbers.size() + " elements took "  + (endTime4 - startTime4)  + " Milliseconds");
+//        Collections.shuffle(numbers);
+//        System.out.println("-----------------------------------------");
+
+        // QUICK SORT TODO
+        System.out.println("Before Quick Sort " + numbers);
+        long startTime5 = System.currentTimeMillis();
+        numbers.quickSort(0, 9);
+        System.out.println("After Quick Sort " + numbers);
+        long endTime5 = System.currentTimeMillis();
+        System.out.println("Quick Sort of " + numbers.size() + " elements took "  + (endTime5 - startTime5)  + " Milliseconds");
         Collections.shuffle(numbers);
         System.out.println("-----------------------------------------");
     }
